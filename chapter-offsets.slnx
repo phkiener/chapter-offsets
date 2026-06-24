@@ -8,5 +8,8 @@
     <File Path="NuGet.config" />
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/Additional items/Workflows/">
+    <File Path=".github\workflows\static.yml" />
+  </Folder>
   <Project Path="src/ChapterOffsets.Web/ChapterOffsets.Web.csproj" />
 </Solution>
