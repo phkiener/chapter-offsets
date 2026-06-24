@@ -2,26 +2,29 @@
 
 <PageTitle>Convert</PageTitle>
 
-<div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; gap: 4ch;">
-    <textarea @bind="input" @bind:after="@Convert" style="height: 20lh; flex: 1 0 auto;"></textarea>
+<div class="converter">
+    <textarea @bind="input" @bind:after="@Convert"></textarea>
     <span>--></span>
-    <textarea @bind="output" style="height: 20lh; flex: 1 0 auto;" readonly></textarea>
+    <textarea @bind="output" readonly></textarea>
 </div>
 
 <p>
     Enter chapters and durations on the left, get chapters and offsets on the right. One per line, parsing is very strict.
+    As an example:
+</p>
 
-    <code style="white-space: preserve-breaks; display: block; padding-block: .5lh; padding-inline: 2ch;">
+<div class="converter">
+    <code class="snippet">
         Chapter 1 11:50
         Chapter 2 5:20
         Chapter 3 1:30
     </code>
 
-    Will be turned into
+    -->
 
-    <code style="white-space: preserve-breaks; display: block; padding-block: .5lh; padding-inline: 2ch;">
+    <code class="snippet">
         Chapter 1 00:00
         Chapter 2 11:50
         Chapter 3 17:10
     </code>
-</p>
+</div>

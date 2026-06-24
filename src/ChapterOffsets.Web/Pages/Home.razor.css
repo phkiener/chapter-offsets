@@ -1,0 +1,24 @@
+.converter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4ch;
+}
+
+p + .converter {
+    justify-content: flex-start;
+}
+
+textarea {
+    height: 20lh;
+    flex: 1 0 auto;
+}
+
+code.snippet {
+    display: block;
+    white-space: preserve-breaks;
+
+    padding-bottom: 1lh;
+    padding-inline: 2ch;
+}
