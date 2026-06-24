@@ -9,4 +9,5 @@
     <File Path="NuGet.config" />
     <File Path="README.md" />
   </Folder>
+  <Project Path="src/ChapterOffsets.Web/ChapterOffsets.Web.csproj" />
 </Solution>
