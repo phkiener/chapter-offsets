@@ -1,6 +1,5 @@
 <Solution>
   <Folder Name="/Additional items/">
-    <File Path=".dockerignore" />
     <File Path=".editorconfig" />
     <File Path=".gitattributes" />
     <File Path=".gitignore" />
