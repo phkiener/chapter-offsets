@@ -30,6 +30,9 @@ jobs:
       - name: Get latest .NET SDK
         uses: actions/setup-dotnet@9a946fdbd5fb07b82b2f5a4466058b876ab72bb2 # v5.3.0
 
+      - name: Restore workloads
+        run: dotnet workload restore
+
       - name: Publish app
         run: dotnet publish -c Release -o publish/ src/ChapterOffsets.Web
 
