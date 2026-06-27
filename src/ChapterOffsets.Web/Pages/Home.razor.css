@@ -1,9 +1,15 @@
 .converter {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-around;
     gap: 4ch;
+}
+
+.converter > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 p + .converter {
@@ -11,8 +17,12 @@ p + .converter {
 }
 
 textarea {
-    height: 20lh;
+    height: auto;
+    min-height: 2lh;
+
     flex: 1 0 auto;
+
+    resize: vertical;
 }
 
 code.snippet {
