@@ -29,6 +29,16 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.controls {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 2ch;
+
+    margin-block-start: -1lh;
+}
+
 section > .converter {
     justify-content: flex-start;
 }

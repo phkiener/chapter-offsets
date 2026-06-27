@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using Microsoft.AspNetCore.Components.Forms
 
 <PageTitle>Convert</PageTitle>
 
@@ -15,6 +16,16 @@
     <textarea rows="20" @bind="input" @bind:after="@Convert"></textarea>
     <span>&rAarr;</span>
     <textarea @bind="output" readonly></textarea>
+</section>
+
+<section class="controls">
+    <h4>Settings</h4>
+
+    <label>
+        <InputCheckbox @bind-Value="showSeconds" @bind-Value:after="Convert"/>
+
+        Show seconds
+    </label>
 </section>
 
 <section>

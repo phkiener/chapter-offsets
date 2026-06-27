@@ -7,6 +7,7 @@ public sealed partial class Home : ComponentBase
 {
     private string input = "";
     private string output = "";
+    private bool showSeconds = false;
 
     private void Convert()
     {
@@ -21,7 +22,7 @@ public sealed partial class Home : ComponentBase
 
             foreach (var chapter in chapters)
             {
-                resultingChapters.Add(new OutputChapter(chapter.Name, offset));
+                resultingChapters.Add(new OutputChapter(chapter.Name, offset) { ShowSeconds = showSeconds });
                 offset += chapter.Duration;
             }
 
@@ -57,9 +58,11 @@ public sealed partial class Home : ComponentBase
 
     private readonly record struct OutputChapter(string Name, TimeSpan Offset)
     {
+        public bool ShowSeconds { get; init; }
+
         public override string ToString()
         {
-            return $"{Name} {Offset.Hours:00}:{Offset.Minutes:00}:{Offset.Seconds:00}";
+            return ShowSeconds ? $"{Name} {Offset.TotalSeconds}" : $"{Name} {Offset.Hours:00}:{Offset.Minutes:00}:{Offset.Seconds:00}";
         }
     }
 }
