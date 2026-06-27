@@ -2,35 +2,43 @@
 
 <PageTitle>Convert</PageTitle>
 
-<div class="converter">
+<header>
+    <h1>Convert chapter durations to offsets</h1>
+
+    <p>
+        Enter chapters and durations on the left, get chapters and offsets on the right.
+        One per line, parsing is very strict and not very smart.
+    </p>
+</header>
+
+<section class="converter">
     <textarea rows="20" @bind="input" @bind:after="@Convert"></textarea>
-    <span>--></span>
+    <span>&rAarr;</span>
     <textarea @bind="output" readonly></textarea>
-</div>
+</section>
 
-<p>
-    Enter chapters and durations on the left, get chapters and offsets on the right.
-    One per line, parsing is very strict and not very smart.
-</p>
+<section>
+    <h4>Example</h4>
 
-<div class="converter">
-    <code class="snippet">
-        Chapter 1 11:50
-        Chapter 2 5:20
-        Chapter 3 1:22:33
-        Chapter 4 1:30
-    </code>
+    <div class="converter">
+        <code class="snippet">
+            Chapter 1 11:50
+            Chapter 2 5:20
+            Chapter 3 1:22:33
+            Chapter 4 1:30
+        </code>
 
-    <span>--></span>
+        <span>&rAarr;</span>
 
-    <code class="snippet">
-        Chapter 1 00:00:00
-        Chapter 2 00:11:50
-        Chapter 3 00:17:10
-        Chapter 4 01:39:43
-    </code>
-</div>
+        <code class="snippet">
+            Chapter 1 00:00:00
+            Chapter 2 00:11:50
+            Chapter 3 00:17:10
+            Chapter 4 01:39:43
+        </code>
+    </div>
+</section>
 
-<p>
+<footer>
     (c) 2026 Philipp Kiener. Check out the source on <a href="https://github.com/phkiener/chapter-offsets">GitHub</a>.
-</p>
+</footer>

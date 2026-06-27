@@ -1,18 +1,35 @@
+header, section, footer {
+    margin-block-start: 1.5lh;
+    margin-block-end: 1.5lh;
+
+    &:first-child {
+        margin-block-start: 0.5lh;
+    }
+
+    &:last-child {
+        margin-block-end: 0.5lh;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
 .converter {
     display: flex;
     flex-direction: row;
     align-items: stretch;
     justify-content: space-around;
     gap: 4ch;
+
+    & > span {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
-.converter > span {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-p + .converter {
+section > .converter {
     justify-content: flex-start;
 }
 
