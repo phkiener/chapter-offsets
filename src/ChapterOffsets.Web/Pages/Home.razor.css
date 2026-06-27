@@ -23,6 +23,8 @@ textarea {
     flex: 1 0 auto;
 
     resize: vertical;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 code.snippet {
